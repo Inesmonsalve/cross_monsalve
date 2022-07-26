@@ -1,8 +1,8 @@
-alert("Bienvenido a tu simulador de conteo de Reps, te ayudaré a conocer la posicion en tabla de todos los equipos")
+alert("Bienvenido a tu simulador de conteo de Reps, te ayudaré a contar las repeteciones por wod de todos los equipos")
 
 // WOD N° 1 
 
-let vueltas, multiplo, equipos, reps, totalReps, i, repsVuelta, nombre
+let vueltas, multiplo, equipos, reps, totalReps, i, repsVuelta, nombre, wod, n=0
 
 // funciones
 
@@ -10,8 +10,12 @@ const multiplicar = (num1=0, num2=0) => num1 * num2
 
 const sumar =(num1=0, num2=0) => num1 + num2
 
+wod= parseFloat(prompt("ingrese la cantida de WODS para esta competencia"))
+
 do{
+
 do {
+
 multiplo = prompt("por favor ingrese el numero de repeticiones que contiene este WOD con un número entero siguiendo el proximo ejemplo: 10 pull ups - 20 clean -15 HSPU, esto corresponderia a un total de reps por vuelta de 45")
 
 console.log ("repeticiones del WOD" , multiplo)
@@ -29,7 +33,7 @@ do {
 
     vueltas= parseFloat(prompt("ingrese el numero de vueltas del equipo "+ nombre))
 
-    console.log("la cantidad de vueltas para en equipo es " ,vueltas)
+    console.log("la cantidad de vueltas para el equipo"+ nombre+  "es" ,vueltas)
 
     reps = parseFloat(prompt("ingrese el numero de repeticiones del ejericio que no termino"))
 
@@ -45,11 +49,7 @@ alert("El numero de reps para el equipo" + nombre + "es de"+ totalReps)
 i++
 
 }while(i !=equipos )
+n++
 
-// wod = prompt("¿Hay mas wods para ingresar? S/N") .toLocaleUpperCase()
-// if(wod != "S" && wod !="N"){
-//    wod= prompt("Ingrese (S) para un si o (N) para un no")
-// }
-
-}while(wod != "n")
+}while(n != wod)
 
